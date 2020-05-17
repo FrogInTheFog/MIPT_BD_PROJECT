@@ -1,5 +1,6 @@
 # MIPT_BD_PROJECT
-git commit -m "MIPT_BD_PROJECT"
+# git commit -m "MIPT_BD_PROJECT"
+
 DB project for 6 sem MIPT
 
 
