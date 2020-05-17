@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# С помощью коммита
 
 import sqlite3 as db
 
