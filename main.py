@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# С помощью коммита
 
 import sqlite3 as db
 
@@ -23,7 +22,6 @@ class Window(Form):
         ui.db_select_button.clicked.connect(self.__select_db)
         ui.query_history.itemDoubleClicked.connect(self.__edit)
         ui.db_current.clicked.connect(self.__select_cur_db)
-
         # Подключение к бд
         self.conn = db.connect(":memory:")  # Исключительно в ОЗУ
 
@@ -78,6 +76,7 @@ class Window(Form):
                 for column_description in cur.description:
                     result_text += f'<td><b>{column_description[0]}</td></b>'
                 result_text += '</tr>'
+                print(result)
                 for row in result:
                     result_text += '<tr>'
                     result_text += ''.join(f'<td>{cell}</td>' for cell in row)
@@ -86,10 +85,10 @@ class Window(Form):
         # Создат виджет для нового элемента списка
         label = QLabel(result_text)
         list_item = QListWidgetItem()
-        # Устонавливаем правильные размеры для этих виджетов
+        # Устанавливаем правильные размеры для этих виджетов
         label.resize(label.sizeHint())  # пересчёт размера
         list_item.setSizeHint(label.sizeHint())
-        # и добовляем элементы в list
+        # и добавляем элементы в list
         h.addItem(list_item)
         h.setItemWidget(list_item, label)
 
