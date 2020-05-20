@@ -22,11 +22,9 @@ class Window(Form):
         ui.execute_button.clicked.connect(self.__execute)
         ui.db_select_button.clicked.connect(self.__select_db)
         ui.query_history.itemDoubleClicked.connect(self.__edit)
-
         ui.db_current.clicked.connect(self.__select_cur_db)
 
         # Подключение к бд
-        #self.conn = db.connect(DB_PATH)
         self.conn = db.connect(":memory:")  # Исключительно в ОЗУ
 
     def __del__(self):  # деструктор
