@@ -68,13 +68,15 @@ CREATE TABLE sessions (
   session_id SMALLINT NOT NULL PRIMARY KEY,
   exam_amount TINYINT,
   session_type VARCHAR(10) CHECK (session_type = 'winter' or session_type = 'summer'),
-  deducted_number SMALLINT
+  deducted_number SMALLINT,
+  stream_id SMALLINT NOT NULL,
+  FOREIGN KEY (stream_id) REFERENCES streams(stream_id)
   );
 """)
 
 cursor.executescript("""
-INSERT INTO sessions VALUES (1, 5, 'winter', 0);
-INSERT INTO sessions VALUES (2, 5, 'summer', 0);
+INSERT INTO sessions VALUES (1, 5, 'winter', 0, 1);
+INSERT INTO sessions VALUES (2, 5, 'summer', 0, 1);
 """)
 
 cursor.executescript("""
