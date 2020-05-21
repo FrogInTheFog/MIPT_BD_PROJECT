@@ -1,6 +1,13 @@
-# MIPT_BD_PROJECT
+## MIPT_BD_PROJECT
 
 DB project for 6 sem MIPT
+
+# Схема базы данных
+
+<br>
+<img height="300" src="https://github.com/FrogInTheFog/MIPT_BD_PROJECT/blob/master/skhema.jpg"/>
+</br>
+
 
 
 Данные файлы являются проектом по базам данным 6 семеста МФТИ, который представляет из себя взаимодействие с базами данных с помощью некой графической оболочки
