@@ -5,7 +5,7 @@ DB project for 6 sem MIPT
 # Схема базы данных
 
 <br>
-<img height="300" src="https://github.com/FrogInTheFog/MIPT_BD_PROJECT/blob/master/skhema.jpg"/>
+<img height="600" src="https://github.com/FrogInTheFog/MIPT_BD_PROJECT/blob/master/skhema.jpg"/>
 </br>
 
 
